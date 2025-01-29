@@ -32,25 +32,22 @@ let scrollLine = 0,
 
 for (let i = 0; i < interactiveCircles.length; i++) {
   interactiveCircles[i].addEventListener("mouseover", () => {
-    let heightCircle = 10,
-        widthCircle = (circlesText[i].innerHTML.length / 3),
-        maxWidth = 30;
-    if (widthCircle > maxWidth) {
-      heightCircle = widthCircle % maxWidth - 10;
-      widthCircle = maxWidth;
-      while (widthCircle > maxWidth) {
-        heightCircle +=10;
-        widthCircle -=maxWidth;
+    let heightCircle = 20,
+        widthCircle = (circlesText[i].innerHTML.length),
+        maxWidth = 25;
+        if (widthCircle > maxWidth) {
+          heightCircle = widthCircle / maxWidth * 2;
+          widthCircle = maxWidth;
+          console.log(heightCircle, widthCircle, widthCircle / 25);
       }
-    }
     circlesText[i].style.visibility = "visible";
     circlesText[i].style.opacity = "1";
     circlesText[i].style.transition = "color 0.3 ease-in-out 0.5s";
     circlesText[i].style.textWrap = "wrap";
     circlesText[i].style.color = "rgba(255, 255, 255, 1)";
     interactiveCircles[i].style.animation = "none";
-    interactiveCircles[i].style.width = widthCircle + 2 + "dvw";
-    interactiveCircles[i].style.height = heightCircle + 2 + "dvh";
+    interactiveCircles[i].style.width = widthCircle + "dvw";
+    interactiveCircles[i].style.height = heightCircle + "dvh";
     interactiveCircles[i].style.backgroundColor = "rgba(255, 255, 255, 0.07)";
     innerCircles[i].style.display = "none";
   })

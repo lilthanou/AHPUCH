@@ -1,6 +1,8 @@
 * {
   margin: 0;
   overflow-x: hidden;
+  font-family: "Jost";
+  color: rgba(255, 255, 255, 0.85);
 }
 body {
   overflow-x: hidden;
@@ -79,12 +81,12 @@ section {
   position: absolute;
   top: 10dvh;
   right: 12dvw;
+  max-width: 35dvw;
   background: rgba(255, 255, 255, 0.07);
   color: rgba(255, 255, 255, 0.85);
   padding: 1em;
   border-radius: 0.625rem;
   font-size: 1rem;
-  max-width: 20rem;
   text-align: baseline;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -352,6 +354,15 @@ section {
   animation-delay: 2.6s;
   animation-duration: 2s;
 }
+
+footer{
+  width: 100dvw;
+  height: 100dvh;
+  background-image: linear-gradient(rgba(9, 9, 9, 0.9) 0%, rgba(9, 9, 9, 0) 20%),
+  url("lib/sky.jpg");
+  background-size: cover;
+}
+
 @keyframes pulse-ring {
   0% {
     transform: scale(0.33);
