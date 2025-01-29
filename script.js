@@ -44,18 +44,20 @@ for (let i = 0; i < interactiveCircles.length; i++) {
       }
     }
     circlesText[i].style.visibility = "visible";
+    circlesText[i].style.opacity = "1";
+    circlesText[i].style.transition = "color 0.3 ease-in-out 0.5s";
+    circlesText[i].style.textWrap = "wrap";
+    circlesText[i].style.color = "rgba(255, 255, 255, 1)";
     interactiveCircles[i].style.animation = "none";
     interactiveCircles[i].style.width = widthCircle + 2 + "dvw";
     interactiveCircles[i].style.height = heightCircle + 2 + "dvh";
     interactiveCircles[i].style.backgroundColor = "rgba(255, 255, 255, 0.07)";
     innerCircles[i].style.display = "none";
-    circlesText[i].style.textWrap = "wrap";
-    circlesText[i].style.color = "rgba(255, 255, 255, 1)";
-    console.log(circlesText[i].innerHTML, heightCircle, i);
   })
   interactiveCircles[i].addEventListener("mouseout", () => {
     circlesText[i].style.visibility = "hidden";
     circlesText[i].style.textWrap = "nowrap";
+    circlesText[i].style.color = "rgba(255, 255, 255, 0)";
     interactiveCircles[i].style.animation = "pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite";
     interactiveCircles[i].style.width = "10dvh";
     interactiveCircles[i].style.height = "10dvh";
@@ -114,8 +116,8 @@ for (let i = 1; i < levels.length; i++) {
 gsap.to(transitionsLevels[0], {
   scrollTrigger: {
     trigger: transitionsLevels[0],
-    start: "50%",
-    end : "50%",
+    start: "bottom 50%",
+    end : "bottom 50%",
     onEnter: () => {
       gsap.to(line, {
         yPercent: (scrollLine = scrollLine - 24),
@@ -135,8 +137,8 @@ for (let i = 1; i < transitionsLevels.length; i++) {
   gsap.to(transitionsLevels[i], {
     scrollTrigger: {
       trigger: transitionsLevels[i],
-      start: "50%",
-      end : "50%",
+      start: "bottom 50%",
+      end : "bottom 50%",
       scrub: 2,
       onEnter: () => {
         gsap.to(line, {

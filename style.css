@@ -8,10 +8,9 @@ body {
   display: flex;
   flex-direction: column;
   background-color: black;
-  scroll-behavior: smooth;
 }
 
-.sky{
+.sky {
   height: 100dvh;
   width: 100dvw;
   background-image: url("lib/sky.jpg");
@@ -20,7 +19,7 @@ body {
   background-size: cover;
 }
 
-.sky-content{
+.sky-content {
   position: fixed;
   top: 5dvh;
   left: 5dvw;
@@ -36,7 +35,7 @@ h1 {
 }
 
 .line {
-  position : fixed;
+  position: fixed;
   top: 100dvh;
   left: 1dvw;
   height: 700vh;
@@ -46,7 +45,11 @@ h1 {
 header {
   height: 100dvh;
   width: 100dvw;
-  background-image: url("lib/zero.png");
+  background-image: linear-gradient(
+      rgba(9,9,9, 0) 80%,
+      rgba(9,9,9, 0.9) 100%
+    ),
+    url("lib/zero.png");
   background-size: cover;
   color: white;
 }
@@ -66,104 +69,130 @@ section {
 }
 
 .transition {
-/*   background-size: contain;
- */  width: 100dvw;
-  height: 53.5dvh;
-  background-color: black;
+    background-size: contain;
+  width: 100dvw;
+  height: 30dvh;
+  background-color: rgb(9, 9, 9);
 }
-
+/* 
 #zero-one {
-  background-image: url("lib/zero-one.png");
-  width: 101dvw;
-  height: 55dvh;
-  background-size: cover;
-}
+  background-image: linear-gradient(rgba(9,9,9, 0) 80%, rgba(9,9,9, 0.9) 100%),
+    linear-gradient(rgba(9,9,9, 0.9) 0%, rgba(9,9,9, 0) 20%),
+    url("lib/zero-one.png");
+} */
 
 #one-a {
-  background-image: url("lib/one-a.png");
+  background-image: linear-gradient(rgba(9,9,9, 0) 80%, rgba(9,9,9, 0.9) 100%),
+  linear-gradient(rgba(9,9,9, 0.9) 0%, rgba(9,9,9, 0) 20%),
+  url("lib/one-a.png");
 }
 
 #one-b {
-  background-image: url("lib/one-b.png");
+  background-image: linear-gradient(rgba(9,9,9, 0) 80%, rgba(9,9,9, 0.9) 100%),
+  linear-gradient(rgba(9,9,9, 0.9) 0%, rgba(9,9,9, 0) 20%),url("lib/one-b.png");
 }
 
-#one-two {
-  background-image: url("lib/one-two.jpg");
+/* #one-two {
+  background-image: linear-gradient(rgba(9,9,9, 0) 80%, rgba(9,9,9, 0.9) 100%),
+  linear-gradient(rgba(9,9,9, 0.9) 0%, rgba(9,9,9, 0) 20%),url("lib/one-two.png");
 }
-
+ */
 #two-a {
-  background-image: url("lib/two-a.png");
+  background-image: linear-gradient(rgba(9,9,9, 0) 80%, rgba(9,9,9, 0.9) 100%),
+  linear-gradient(rgba(9,9,9, 0.9) 0%, rgba(9,9,9, 0) 20%),url("lib/two-a.png");
 }
 #two-b {
-  background-image: url("lib/two-b.png");
+  background-image: linear-gradient(rgba(9,9,9, 0) 80%, rgba(9,9,9, 0.9) 100%),
+  linear-gradient(rgba(9,9,9, 0.9) 0%, rgba(9,9,9, 0) 20%),url("lib/two-b.png");
 }
 
-#two-three {
-  background-image: url("lib/two-three.png");
-}
+/* #two-three {
+  background-image: linear-gradient(rgba(9,9,9, 0) 80%, rgba(9,9,9, 0.9) 100%),
+  linear-gradient(rgba(9,9,9, 0.9) 0%, rgba(9,9,9, 0) 20%),url("lib/two-three.png");
+} */
 #three-a {
-  background-image: url("lib/three-a.png");
+  background-image: linear-gradient(rgba(9,9,9, 0) 80%, rgba(9,9,9, 0.9) 100%),
+  linear-gradient(rgba(9,9,9, 0.9) 0%, rgba(9,9,9, 0) 20%),url("lib/three-a.png");
 }
 #three-b {
-  background-image: url("lib/three-b.png");
+  background-image: linear-gradient(rgba(9,9,9, 0) 80%, rgba(9,9,9, 0.9) 100%),
+  linear-gradient(rgba(9,9,9, 0.9) 0%, rgba(9,9,9, 0) 20%),url("lib/three-b.png");
 }
 
-#three-four {
-  background-image: url("lib/three-four.png");
-}
+/* #three-four {
+  background-image: linear-gradient(rgba(9,9,9, 0) 80%, rgba(9,9,9, 0.9) 100%),
+  linear-gradient(rgba(9,9,9, 0.9) 0%, rgba(9,9,9, 0) 20%),url("lib/three-four.png");
+} */
 #four-a {
-  background-image: url("lib/four-a.png");
+  background-image: linear-gradient(rgba(9,9,9, 0) 80%, rgba(9,9,9, 0.9) 100%),
+  linear-gradient(rgba(9,9,9, 0.9) 0%, rgba(9,9,9, 0) 20%),url("lib/four-a.png");
 }
 #four-b {
-  background-image: url("lib/four-b.png");
+  background-image: linear-gradient(rgba(9,9,9, 0) 80%, rgba(9,9,9, 0.9) 100%),
+  linear-gradient(rgba(9,9,9, 0.9) 0%, rgba(9,9,9, 0) 20%),url("lib/four-b.png");
 }
 
-#four-five {
-  background-image: url("lib/four-five.png");
-}
+/* #four-five {
+  background-image: linear-gradient(rgba(9,9,9, 0) 80%, rgba(9,9,9, 0.9) 100%),
+  linear-gradient(rgba(9,9,9, 0.9) 0%, rgba(9,9,9, 0) 20%),url("lib/four-five.png");
+} */
 
 #five-a {
-  background-image: url("lib/five-a.png");
+  background-image: linear-gradient(rgba(9,9,9, 0) 80%, rgba(9,9,9, 0.9) 100%),
+  linear-gradient(rgba(9,9,9, 0.9) 0%, rgba(9,9,9, 0) 20%),url("lib/five-a.png");
 }
 #five-b {
-  background-image: url("lib/five-b.png");
+  background-image: linear-gradient(rgba(9,9,9, 0) 80%, rgba(9,9,9, 0.9) 100%),
+  linear-gradient(rgba(9,9,9, 0.9) 0%, rgba(9,9,9, 0) 20%),url("lib/five-b.png");
 }
-#five-six {
-  background-image: url("lib/five-six.png");
-}
+/* #five-six {
+  background-image: linear-gradient(rgba(9,9,9, 0) 80%, rgba(9,9,9, 0.9) 100%),
+  linear-gradient(rgba(9,9,9, 0.9) 0%, rgba(9,9,9, 0) 20%),url("lib/five-six.png");
+} */
 #six-a {
-  background-image: url("lib/six-a.jpg");
+  background-image: linear-gradient(rgba(9,9,9, 0) 80%, rgba(9,9,9, 0.9) 100%),
+    linear-gradient(rgba(9,9,9, 0.9) 0%, rgba(9,9,9, 0) 20%),url("lib/six-a.jpg");
 }
 #six-b {
-  background-image: url("lib/six-b.jpg");
+  background-image: linear-gradient(rgba(9,9,9, 0) 80%, rgba(9,9,9, 0.9) 100%),
+    linear-gradient(rgba(9,9,9, 0.9) 0%, rgba(9,9,9, 0) 20%),url("lib/six-b.jpg");
 }
-#six-seven {
-  background-image: url("lib/one-two.png");
-}
+/* #six-seven {
+  background-image: linear-gradient(rgba(9,9,9, 0) 80%, rgba(9,9,9, 0.9) 100%),
+    linear-gradient(rgba(9,9,9, 0.9) 0%, rgba(9,9,9, 0) 20%),url("lib/one-two.png");
+} */
 #seven-a {
-  background-image: url("lib/one-a.png");
+  background-image: linear-gradient(rgba(9,9,9, 0) 80%, rgba(9,9,9, 0.9) 100%),
+    linear-gradient(rgba(9,9,9, 0.9) 0%, rgba(9,9,9, 0) 20%),url("lib/one-a.png");
 }
 #seven-b {
-  background-image: url("lib/one-b.png");
+  background-image: linear-gradient(rgba(9,9,9, 0) 80%, rgba(9,9,9, 0.9) 100%),
+    linear-gradient(rgba(9,9,9, 0.9) 0%, rgba(9,9,9, 0) 20%),url("lib/one-b.png");
 }
-#seven-eight {
-  background-image: url("lib/one-two.png");
-}
+/* #seven-eight {
+  background-image: linear-gradient(rgba(9,9,9, 0) 80%, rgba(9,9,9, 0.9) 100%),
+    linear-gradient(rgba(9,9,9, 0.9) 0%, rgba(9,9,9, 0) 20%),url("lib/one-two.png");
+} */
 #eight-a {
-  background-image: url("lib/one-a.png");
+  background-image: linear-gradient(rgba(9,9,9, 0) 80%, rgba(9,9,9, 0.9) 100%),
+    linear-gradient(rgba(9,9,9, 0.9) 0%, rgba(9,9,9, 0) 20%),url("lib/one-a.png");
 }
 #eight-b {
-  background-image: url("lib/one-b.png");
+  background-image: linear-gradient(rgba(9,9,9, 0) 80%, rgba(9,9,9, 0.9) 100%),
+    linear-gradient(rgba(9,9,9, 0.9) 0%, rgba(9,9,9, 0) 20%),url("lib/one-b.png");
 }
 
-#eight-nine {
-  background-image: url("lib/one-two.png");
-}
+/* #eight-nine {
+  background-image: linear-gradient(rgba(9,9,9, 0) 80%, rgba(9,9,9, 0.9) 100%),
+    linear-gradient(rgba(9,9,9, 0.9) 0%, rgba(9,9,9, 0) 20%),url("lib/one-two.png");
+} */
 #nine-a {
-  background-image: url("lib/one-a.png");
+  background-image: linear-gradient(rgba(9,9,9, 0) 80%, rgba(9,9,9, 0.9) 100%),
+    linear-gradient(rgba(9,9,9, 0.9) 0%, rgba(9,9,9, 0) 20%),url("lib/one-a.png");
 }
 #nine-b {
-  background-image: url("lib/one-b.png");
+  background-image: linear-gradient(rgba(9,9,9, 0) 80%, rgba(9,9,9, 0.9) 100%),
+    linear-gradient(rgba(9,9,9, 0.9) 0%, rgba(9,9,9, 0) 20%),url("lib/one-b.png");
 }
 
 .interactive-circle {
@@ -178,7 +207,7 @@ section {
   cursor: pointer;
   z-index: 2;
   animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
-  transition: all 0.3s;
+  transition: all 0.5s;
   overflow: hidden;
 }
 
@@ -190,6 +219,7 @@ section {
   text-wrap: nowrap;
   padding: 2dvw;
   color: rgba(255, 255, 255, 0);
+  transition: color 0.1s ease 0.5s;
 }
 
 .inner-circle {
@@ -199,7 +229,6 @@ section {
   border-radius: 50px;
   background-color: rgba(255, 255, 255, 0.944);
   animation: pulse-dot 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
-  animation-delay: 0.2s;
 }
 
 #circle-zero {
@@ -300,10 +329,9 @@ section {
   animation-duration: 2s;
 }
 
-
 @keyframes pulse-ring {
   0% {
-    transform: scale(.33);
+    transform: scale(0.33);
   }
   100% {
     opacity: 0;
@@ -312,12 +340,12 @@ section {
 
 @keyframes pulse-dot {
   0% {
-    transform: scale(.9);
+    transform: scale(0.9);
   }
   50% {
     transform: scale(1.5);
   }
   100% {
-    transform: scale(.9);
+    transform: scale(0.9);
   }
 }
