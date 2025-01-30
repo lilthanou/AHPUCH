@@ -19,13 +19,15 @@ body {
   background-size: cover;
 }
 .sky-content {
-  position: fixed;
-  top: 5dvh;
-  left: 5dvw;
-  height: fit-content;
-  width: 30dvw;
+  height: 100dvh;
+  width: 100dvw;
 }
 h1 {
+  position: fixed;
+  bottom: 10dvh;
+  left: 5dvw;
+  height: fit-content;
+  width: 60dvw;
   font-size: 6dvh;
   color: rgba(255, 255, 255, 0.85);
   text-align: left;
@@ -51,7 +53,7 @@ h3 {
   position: fixed;
   top: 100dvh;
   left: 1dvw;
-  height: 700vh;
+  height: 800vh;
   z-index: 1;
 }
 header {
@@ -64,6 +66,27 @@ header {
     url("lib/zero.jpg");
   background-size: cover;
   color: rgba(255, 255, 255, 0.85);
+  position: relative;
+}
+.header-logos{
+  position: absolute;
+  top: 5dvh;
+  right: 5dvw;
+  height: 20dvh;
+  width: 10dvw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: red;
+}
+.header-logos>div{
+  height: 8dvh;
+  width: 20dvh;
+/*   width: auto;
+/*background-image: url();*/
+  background-size: contain;
+  background-color: blue;
 }
 section {
   height: 100dvh;
@@ -357,10 +380,22 @@ section {
 
 footer{
   width: 100dvw;
-  height: 100dvh;
+  height: 120dvh;
   background-image: linear-gradient(rgba(9, 9, 9, 0.9) 0%, rgba(9, 9, 9, 0) 20%),
   url("lib/sky.jpg");
   background-size: cover;
+  color: white;
+  z-index: -1;
+  position: relative;
+}
+
+.footer-bottom{
+  position: absolute;
+  bottom: 0;
+  width: 100dvw;
+  height: 50dvh;
+  background-image: linear-gradient(rgba(9, 9, 9, 0) 30%, rgba(9, 9, 9, 0.9) 50%);
+  z-index: 1;
 }
 
 @keyframes pulse-ring {

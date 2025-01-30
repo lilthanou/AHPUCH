@@ -2,7 +2,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const line = ".line",
   sky = ".sky",
-  skyContent = ".sky-content",
+  title = ".title",
   zero = "#zero",
   zeroOne = "#zero-one",
   one = "#one",
@@ -21,11 +21,12 @@ const line = ".line",
   sevenEight = "#seven-eight",
   eight = "#eight",
   eightNine = "#eight-nine",
-  nine = "#nine";
+  nine = "#nine",
+  nineFooter = "#nine-footer";
 
 let scrollLine = 0,
   levels = [zero, one, two, three, four, five, six, seven, eight, nine],
-  transitionsLevels = [zeroOne, oneTwo, twoThree, threeFour, fourFive, fiveSix, sixSeven, sevenEight, eightNine],
+  transitionsLevels = [zeroOne, oneTwo, twoThree, threeFour, fourFive, fiveSix, sixSeven, sevenEight, eightNine, nineFooter],
   interactiveCircles = document.getElementsByClassName("interactive-circle");
   circlesText = document.getElementsByClassName("circle-text");
   innerCircles = document.getElementsByClassName("inner-circle");
@@ -71,28 +72,19 @@ gsap.to(sky, {
     trigger: sky,
     start: "top",
     end: "50%",
-    scrub: 1,
+    scrub: 0.4,
     pin: true,
     pinSpacing: true,
     },
 });
 
-gsap.to(sky, {
+gsap.to(title, {
+  yPercent : -650,
   scrollTrigger: {
-    trigger: sky,
-    start: "bottom 30%",
-    end: "bottom 30%",
-    scrub: 0.5,
-    onEnter : () => {
-      gsap.to(skyContent, {
-        yPercent : -200,
-      });
-    },
-    onEnterBack : () => {
-      gsap.to(skyContent, {
-        yPercent : 4,
-      });
-    },
+    trigger: title,
+    start: "bottom 80%",
+    end: "top 30%",
+    scrub: 2,
   },
 });
 
@@ -117,13 +109,14 @@ gsap.to(transitionsLevels[0], {
     end : "bottom 50%",
     onEnter: () => {
       gsap.to(line, {
-        yPercent: (scrollLine = scrollLine - 24),
+        yPercent: (scrollLine = scrollLine - 21.5),
         duration : 0.5,
       });
+      console.log(scrollLine);
     },
     onEnterBack: () => {
       gsap.to(line, {
-        yPercent: (scrollLine = scrollLine + 24),
+        yPercent: (scrollLine = scrollLine + 21.5),
         duration : 0.5,
       });
     },
@@ -139,16 +132,37 @@ for (let i = 1; i < transitionsLevels.length; i++) {
       scrub: 2,
       onEnter: () => {
         gsap.to(line, {
-          yPercent: (scrollLine = scrollLine - 10.5),
+          yPercent: (scrollLine = scrollLine - 9.6),
           duration : 0.5,
         });
       },
       onEnterBack: () => {
         gsap.to(line, {
-          yPercent: (scrollLine = scrollLine + 10.5),
+          yPercent: (scrollLine = scrollLine + 9.6),
           duration : 0.5,
         });
       },
     },
   });
 }
+
+gsap.to(transitionsLevels[9], {
+  scrollTrigger: {
+    trigger: transitionsLevels[9],
+    start: "bottom 50%",
+    end : "bottom 50%",
+    onEnter: () => {
+      gsap.to(line, {
+        yPercent: (scrollLine = scrollLine + 2),
+        duration : 0.5,
+      });
+      console.log(scrollLine);
+    },
+    onEnterBack: () => {
+      gsap.to(line, {
+        yPercent: (scrollLine = scrollLine - 2 ),
+        duration : 0.5,
+      });
+    },
+  },
+});
