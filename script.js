@@ -35,17 +35,16 @@ for (let i = 0; i < interactiveCircles.length; i++) {
   interactiveCircles[i].addEventListener("mouseover", () => {
     let heightCircle = 20,
         widthCircle = (circlesText[i].innerHTML.length),
-        maxWidth = 25;
+        maxWidth = 32;
         if (widthCircle > maxWidth) {
           heightCircle = widthCircle / maxWidth * 2;
           widthCircle = maxWidth;
-          console.log(heightCircle, widthCircle, widthCircle / 25);
       }
     circlesText[i].style.visibility = "visible";
     circlesText[i].style.opacity = "1";
     circlesText[i].style.transition = "color 0.3 ease-in-out 0.5s";
     circlesText[i].style.textWrap = "wrap";
-    circlesText[i].style.color = "rgba(255, 255, 255, 1)";
+    circlesText[i].style.color = "rgba(255, 255, 255, 0.65)";
     interactiveCircles[i].style.animation = "none";
     interactiveCircles[i].style.width = widthCircle + "dvw";
     interactiveCircles[i].style.height = heightCircle + "dvh";
@@ -79,11 +78,11 @@ gsap.to(sky, {
 });
 
 gsap.to(title, {
-  yPercent : -650,
+  yPercent : -300,
   scrollTrigger: {
     trigger: title,
-    start: "bottom 80%",
-    end: "top 30%",
+    start: "bottom 30%",
+    end: "bottom top",
     scrub: 2,
   },
 });
@@ -166,3 +165,14 @@ gsap.to(transitionsLevels[9], {
     },
   },
 });
+
+const body = document.body;
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 0) {
+    body.classList.add('scrolled'); // Ajouter la classe scrolled
+    }
+  else {
+    body.classList.remove('scrolled'); // Retirer la classe scrolled
+  }
+});
+
