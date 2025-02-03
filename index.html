@@ -17,6 +17,24 @@
   <body id="body">
     <img src="lib/LIGNEVF.svg" alt="line" class="line"/>
 
+    <audio id="audio" src="lib/background-music.mp3" loop></audio>
+    <audio id="transition-sound" src="lib/transition-sound.mov"></audio>
+
+    <nav class="nav">
+      <a href="#zero"><div id="home-control"></div></a>
+      <div id="audio-control" alt="" onclick="toggleAudio()"></div>
+    </nav>
+
+    <div class="scroll-animation">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+      </svg>
+      <p>scroll down</p>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+      </svg>
+    </div>
+
     <div class="sky">
         <div class="header-logos">
             <div class=""><img src="./lib/logo-quaibranly.svg" alt=""></div>
@@ -30,7 +48,7 @@
       <div class="interactive-circle" id="circle-zero">
         <div class="circle-text">
           Et si vous faisiez face aux questions que personne n’ose poser ?
-          <br />Plongez dans l’univers des Mayas pour découvrir leurs réponses.
+          Plongez dans l’univers des Mayas pour découvrir leurs réponses.
         </div>
         <div class="inner-circle"></div>
       </div>
@@ -47,7 +65,7 @@
           <div class="circle-content">
             <img src="./lib/serpent-plume 1.jpg" alt="Kukulcàn" class="circle-image">
             <div class="circle-text">
-              <div class="circle-title">Le serpent a plume</div>
+              <div class="circle-title">Le serpent à plume</div>
               L'une des figures les plus répandues de la civilisation maya est le
               serpent quetzal, le dieu Kukulcàn de la période postclassique
               associé au ciel, au vent, à la pluie et à l'eau. Il ornait toutes
@@ -82,7 +100,8 @@
       </div>
     </section>
 
-    <section id="one-two" class="transition"></section>
+    <section id="one-two" class="transition">
+    </section>
 
     <section id="two">
       <div class="level" id="two-a">
@@ -323,15 +342,29 @@
     <section id="nine-footer" class="transition"></section>
 
     <footer>
+
+      <div class="line-horizontal">
+        <img src="lib/GLYPH.svg" alt="Glyph">
+        <img src="lib/GLYPH-1.svg" alt="Glyph">
+        <img src="lib/GLYPH-2.svg" alt="Glyph">
+        <img src="lib/GLYPH-3.svg" alt="Glyph">
+        <img src="lib/GLYPH-4.svg" alt="Glyph">
+        <img src="lib/GLYPH-5.svg" alt="Glyph">
+        <img src="lib/GLYPH-6.svg" alt="Glyph">
+        <img src="lib/GLYPH-7.svg" alt="Glyph">
+        <img src="lib/GLYPH-8.svg" alt="Glyph">
+      </div>
+
       <div class="final">
         <h3 class="final-content">Vous avez traversé les épreuves du Xibalba… et maintenant ?</h3>
         <p class="text-content"> Prolongez votre voyage et découvrez les véritables trésors des Mayas au Musée du Quai Branly.</p>
-        <button type="button">Découvrir l'exposition</button>
-
+        <a class="final-button" href="https://www.quaibranly.fr/en/" target="_blank">
+          <button type="button">Découvrir l'exposition</button>
+        </a>
       </div>
       <div class="footer-bottom"></div>
     </footer>
-
+    
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>

@@ -1,15 +1,69 @@
+:root {
+  --color-1: rgb(255, 255, 255);
+  --color-2: rgba(255, 255, 255, 0.90);
+  --color-3: rgba(255, 255, 255, 0.80);
+  --color-4: rgba(255, 255, 255, 0.50);
+}
+
 * {
   margin: 0;
   overflow-x: hidden;
   font-family: "Jost";
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--color-1);
 }
 body {
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
   background-color: black;
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 40 40"><circle cx="20" cy="20" r="15" fill="white" fill-opacity="0.6"/></svg>') 30 30, auto;
 }
+
+nav {
+  position: fixed;
+  bottom: 2dvw;
+  right: 2dvw;
+  height: 4dvh;
+  width: fit-content;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 1dvw;
+}
+
+nav div {
+  height: 4dvh;
+  width: 4dvh;
+  backdrop-filter: blur(5px);
+  cursor: pointer;
+  z-index: 2;
+  background-size: contain;
+}
+
+#audio-control {
+  background-image: url(lib/sound-off.png);
+}
+
+#home-control {
+  background-image: url(lib/arrow-up.svg);
+}
+
+.scroll-animation {
+  position: fixed;
+  bottom: 2dvw;
+  height: 3dvh;
+  width: 100dvw;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  font-size: 2dvh;
+  color: var(--color-1);
+  text-align: center;
+  z-index: 1;
+  gap: 1dvw;
+  animation: scroll 2s linear infinite;
+}
+
 .sky {
   height: 100dvh;
   width: 100dvw;
@@ -24,14 +78,15 @@ body {
 }
 h1 {
   position: fixed;
-  bottom: 10dvh;
-  left: 5dvw;
+  bottom: 35dvh;
+  left: 5dvh;
   height: fit-content;
   width: 60dvw;
   font-size: 10dvh;
-  color: rgba(255, 255, 255, 0.85);
+  font-family: "Eczar";
+  color: var(--color-1);
   text-align: left;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  line-height: 12dvh;
 }
 
 h2{
@@ -42,7 +97,7 @@ h2{
   font-size: 2.8rem;
   width: 55dvw;
   height: fit-content;
-  color : rgba(255, 255, 255, 0.785);
+  color : var(--color-3);
   letter-spacing: 1px;
 }
 
@@ -74,15 +129,15 @@ header {
       rgba(9, 9, 9, 0.9) 100%),
     url("lib/zero.jpg");
   background-size: cover;
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--color-1);
   position: relative;
   background-position: center;
 }
 
 .header-logos {
   position: absolute;
-  top: 5dvh;
-  right: 5dvw;
+  top: 3dvh;
+  right: 3dvh;
   width: auto;
   display: flex;
   flex-direction: column;
@@ -102,6 +157,7 @@ header {
 .header-logos img {
   max-width: 100%;
   height: auto;
+  opacity: 0.9;
 }
 section {
   height: 100dvh;
@@ -120,17 +176,17 @@ section {
   right: 12dvw;
   max-width: 35dvw;
   background: rgba(255, 255, 255, 0.104);
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--color-1);
   padding: 1em;
   border-radius: 0.425rem;
   font-size: 1rem;
   text-align: baseline;
   backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid var(--color-4);
 }
 
 .text-content {
-  color: rgba(255, 255, 255, 0.697);
+  color: var(--color-3);
   font-size: 1.1rem;
   text-align: baseline;
 }
@@ -329,6 +385,7 @@ section {
   flex-shrink: 0;
   opacity: 0;
   transition: opacity 0.5s ease;
+  margin-left : 1dvw;
 }
 
 #hanub {
@@ -342,12 +399,13 @@ section {
 }
 
 .interactive-circle:hover .circle-text {
-  color: rgba(255, 255, 255, 1);
+  color: var(--color-1);
 }
 
 .interactive-circle:hover .circle-image {
   opacity: 1;
 }
+
 .circle-text {
   font-size: 16px;
   white-space: normal; 
@@ -358,9 +416,8 @@ section {
 }
 
 .circle-title {
-  color: rgba(255, 255, 255, 0.659);
+  color: var(--color-2);
   margin: none;
-  font-weight: lighter;
   padding-bottom: 1.5dvh;
   
 }
@@ -370,7 +427,7 @@ section {
   height: 5dvh;
   position: absolute;
   border-radius: 50px;
-  background-color: rgba(255, 255, 255, 0.944);
+  background-color: var(--color-2);
   animation: pulse-dot 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
 }
 
@@ -380,7 +437,7 @@ section {
 }
 #circle-one-one {
   top: 15dvh;
-  left: 15dvw;
+  left: 12dvw;
   animation-delay: 0.2s;
   animation-duration: 2s;
 }
@@ -454,18 +511,71 @@ section {
 
 footer {
   display: flex;
-  justify-content: center;  
+  gap: 10dvw;
   align-items: center; 
-  flex-direction: column; 
+  flex-direction: column;
   width: 100dvw;
   height: 160dvh;
   background-image: linear-gradient(rgba(9, 9, 9, 0.9) 0%, rgba(9, 9, 9, 0) 20%),
     url("lib/sky.jpg");
   background-size: cover;
   background-position: center;
-  color: white;
-  z-index: -1;
   position: relative;
+}
+
+.final {
+  height: fit-content;
+  max-width: 50dvw;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  padding: 2dvw;
+  border-radius: 0.425rem;
+  font-size: 1rem;
+  border: 1px solid var(--color-2);
+  display: flex;
+  flex-direction: column; 
+  gap: 5dvh;
+}
+
+.final-button {
+  width: fit-content;
+  margin: auto;
+  animation: pulse 2s infinite;
+}
+
+button {
+  background: transparent;
+  padding: 1.5dvh 2dvw;
+  border: 2px solid var(--color-3);
+  color: var(--color-1);
+  font-family: Eczar;
+  font-size: 1dvw;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 600;
+  border-radius: 4px;
+  margin: auto;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  background : var(--color-4);
+  backdrop-filter: blur(1%);
+  cursor: pointer;
+}
+
+.line-horizontal {
+  margin-top: 30dvh;
+  height: 10dvh;
+  width: 80dvw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.line-horizontal img {
+  height: 9dvh;
+  width: 9dvh;
 }
 
 .footer-bottom {
@@ -480,8 +590,6 @@ footer {
   align-items: center;
   text-align: center;
 }
-
-
 
 @keyframes pulse-ring {
   0% {
@@ -503,49 +611,6 @@ footer {
   }
 }
 
-
-.final {
-  z-index: 10;
-  position: relative;
-  height: fit-content;
-  max-width: 50dvw;
-  background: rgba(255, 255, 255, 0.032);
-  color: rgba(255, 255, 255, 0.85);
-  padding: 2em; /* Increased padding for better spacing */
-  border-radius: 0.425rem;
-  font-size: 1rem;
-  text-align: baseline;
-  backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  margin-right: 30dvh;
-  margin-bottom: 25dvh;
-  display: flex; /* Flexbox for spacing */
-  flex-direction: column; /* Stack elements vertically */
-  gap: 5dvh; /* Adjust space between children */
-}
-
-button {
-  background: transparent;
-  padding: 1.5em 2em;
-  border: 2px solid rgba(255, 255, 255, 0.783);
-  color: white;
-  font-family: Eczar;
-  font-size: 16px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-weight: 600;
-  border-radius: 4px;
-  cursor: pointer;
-  margin: auto;
-  position: relative;
-  display: grid;
-  place-items: center;
-  transition: 0.4s ease-in-out;
-  animation: pulse 2s infinite;
-  overflow: hidden;
-  z-index: 10;
-}
-
 @keyframes pulse {
   0% {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
@@ -558,39 +623,17 @@ button {
   }
 }
 
-button:hover {
-  color: #FF0000;
-  border-color: #ffffff;
-  text-shadow: 0 0 8px #ffffff;
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.8), 0 0 50px rgba(255, 0, 0, 0.6);
-  letter-spacing: 5px;
-}
-
-button::before {
-  content: "";
-  position: absolute;
-  width: 200%;
-  height: 200%;
-  background: rgba(255, 255, 255, 0.6);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  border-radius: 50%;
-  z-index: -1;
-  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
-}
-
-button:hover::before {
-  transform: translate(-50%, -50%) scale(2);
-  opacity: 0;
-}
-
-body {
-  cursor: url('lib/cursor.svg') 30 30, auto; 
-}
-
-body.scrolled {
-  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 40 40"><circle cx="20" cy="20" r="15" fill="white" fill-opacity="0.6"/></svg>') 30 30, auto;
+@keyframes scroll {
+  0% {
+    opacity: 0;
+    bottom: 5dvh;
+  }
+  30%, 70% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 @media (max-width: 480px) {
