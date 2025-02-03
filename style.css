@@ -646,6 +646,7 @@ button:hover {
     width: 60dvw;
     text-align: top;
     font-size: 18px;
+    line-height: 1.5;
   }
 
   h2 {
@@ -682,6 +683,13 @@ button:hover {
     display: none;
   }
   .line {
+    display: none;
+  }
+
+  button{
+    font-size: 1rem;
+  }
+  .line-horizontal {
     display: none;
   }
 }
