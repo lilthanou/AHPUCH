@@ -87,6 +87,7 @@ h1 {
   color: var(--color-1);
   text-align: left;
   line-height: 12dvh;
+  overflow-y: hidden;
 }
 
 h2{
