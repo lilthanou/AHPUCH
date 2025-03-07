@@ -457,8 +457,14 @@ section {
 }
 #circle-two-two {
   top: 55dvh;
-  left: 39dvw;
+  left: 60dvw;
   animation-delay: 1s;
+  animation-duration: 2s;
+}
+#circle-two-three {
+  top: 30dvh;
+  left: 20dvw;
+  animation-delay: 0.3s;
   animation-duration: 2s;
 }
 #circle-three-one {
